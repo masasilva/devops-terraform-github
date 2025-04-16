@@ -23,6 +23,18 @@ Antes de começar, verifique se você possui os seguintes pré-requisitos instal
 #### a. Variáveis
 O Terraform utiliza arquivos de variáveis para definir informações como regiões e tipos de instância. Exemplo de configuração:
 
+No diretório **terraform/**, você encontrará o código necessário para provisionar uma máquina virtual no Azure. Siga os passos abaixo para configurar:
+
+- Edite o arquivo `variables.tf` com suas credenciais do Azure e as variáveis do ambiente.
+- Execute os comandos do Terraform para inicializar e aplicar a infraestrutura:
+
+```bash
+terraform init
+terraform validate
+terraform plan
+terraform apply
+
+
 ```hcl
 variable "aws_region" {
   description = "A região da AWS onde os recursos serão criados"
@@ -35,3 +47,4 @@ variable "instance_type" {
   type        = string
   default     = "t2.micro"
 }
+
