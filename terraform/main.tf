@@ -45,4 +45,3 @@ resource "azurerm_linux_virtual_machine" "example" {
   admin_password      = "P@ssw0rd1234"
   disable_password_authentication = false
 }
-
